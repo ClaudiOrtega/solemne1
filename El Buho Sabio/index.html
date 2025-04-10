@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Librería El Búho Sabio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Librería El Búho Sabio</h1>
+    <nav>
+      <button onclick="showSection('productos')"> Productos</button>
+      <button onclick="showSection('carrito')"> Carrito</button>
+      <button onclick="showSection('pago')"> Pago</button>
+    </nav>
+  </header>
+
+  <main>
+    //Sección productos
+    <section id="productos">
+      <h2>Catálogo de Libros</h2>
+      <div id="lista-productos" class="grid"></div>
+    </section>
+
+    //Sección carrito
+    <section id="carrito" style="display:none;">
+      <h2>Tu Carrito</h2>
+      <div id="contenido-carrito"></div>
+      <p id="total"></p>
+    </section>
+
+    //Sección pago
+
+    <section id="pago" style="display:none;">
+      <h2>Pago Simulado</h2>
+      <form id="formulario-pago">
+        <input type="text" placeholder="Nombre completo" required><br>
+        <input type="text" placeholder="Número de tarjeta" required><br>
+        <input type="text" placeholder="Vencimiento (MM/AA)" required><br>
+        <input type="text" placeholder="CVV" required><br>
+        <button type="submit">Pagar</button>
+      </form>
+      <p id="mensaje-pago"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
