@@ -2,47 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Librería El Búho Sabio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>El Búho Sabio - Biblioteca Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap + Google Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f6f4ef;
+      color: #3b3b3b;
+    }
+    header {
+      background-color: #2e1f12;
+      color: #fff;
+      padding: 2rem 0;
+      font-family: 'Playfair Display', serif;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: #2e1f12;
+    }
+    .book-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #2e1f12;
+      color: #fff;
+      padding: 1rem 0;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Librería El Búho Sabio</h1>
-    <nav>
-      <button onclick="showSection('productos')"> Productos</button>
-      <button onclick="showSection('carrito')"> Carrito</button>
-      <button onclick="showSection('pago')"> Pago</button>
-    </nav>
+
+  <header class="text-center">
+    <h1 class="display-4">📚 El Búho Sabio</h1>
+    <p class="lead">Tu biblioteca digital favorita</p>
   </header>
 
-  <main>
-    //Sección productos
-    <section id="productos">
-      <h2>Catálogo de Libros</h2>
-      <div id="lista-productos" class="grid"></div>
-    </section>
-
-    //Sección carrito
-    <section id="carrito" style="display:none;">
-      <h2>Tu Carrito</h2>
-      <div id="contenido-carrito"></div>
-      <p id="total"></p>
-    </section>
-
-    //Sección pago
-
-    <section id="pago" style="display:none;">
-      <h2>Pago Simulado</h2>
-      <form id="formulario-pago">
-        <input type="text" placeholder="Nombre completo" required><br>
-        <input type="text" placeholder="Número de tarjeta" required><br>
-        <input type="text" placeholder="Vencimiento (MM/AA)" required><br>
-        <input type="text" placeholder="CVV" required><br>
-        <button type="submit">Pagar</button>
-      </form>
-      <p id="mensaje-pago"></p>
-    </section>
+  <main class="container my-5">
+    <h2 class="section-title mb-4">Libros Recomendados</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="book-card">
+          <h5>1984</h5>
+          <p>George Orwell</p>
+          <small>Distopía, política, control social.</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="book-card">
+          <h5>El Principito</h5>
+          <p>Antoine de Saint-Exupéry</p>
+          <small>Reflexiones sobre la vida y la infancia.</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="book-card">
+          <h5>Cien Años de Soledad</h5>
+          <p>Gabriel García Márquez</p>
+          <small>Realismo mágico latinoamericano.</small>
+        </div>
+      </div>
+    </div>
   </main>
+
+  <footer class="text-center">
+    <p>© 2025 El Búho Sabio. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
